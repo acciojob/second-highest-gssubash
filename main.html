@@ -10,10 +10,11 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			if(arr.length<2)return -Infinity;
 			let flag = arr.reduce((a,b)=>{
 				return a==b;
 			});
-			if(arr.length<2 || flag){
+			if(flag){
 				return -Infinity;
 			}
 			
