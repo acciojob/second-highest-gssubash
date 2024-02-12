@@ -10,20 +10,20 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			if(arr.length<2)return -Infinity;
+			if(arr.length<2)return -Infinity; 
 			let flag = arr.reduce((a,b)=>{
 				return a==b;
 			});
 			if(flag){
 				return -Infinity;
 			}
-			
+			arr.sort();
 			let big = arr[0],result=arr[0];
 			for(let i=1;i<arr.length;i++){
 				if(big<arr[i])
 					big = arr[i];
 			}
-
+ 
 			for(let i=1;i<arr.length;i++){
 				if(result<arr[i] && arr[i]!=big)
 					result = arr[i];
