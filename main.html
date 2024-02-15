@@ -17,14 +17,14 @@
 			if(flag){
 				return -Infinity;
 			}
-			arr.sort();
-			let big = arr[0],result=arr[0];
-			for(let i=1;i<arr.length;i++){
+			
+			let big = -Infinity,result=-Infinity;
+			for(let i=0;i<arr.length;i++){
 				if(big<arr[i])
-					big = arr[i];
+					big = arr[i]; 
 			}
- 
-			for(let i=1;i<arr.length;i++){
+  
+			for(let i=0;i<arr.length;i++){
 				if(result<arr[i] && arr[i]!=big)
 					result = arr[i];
 			}
@@ -38,7 +38,7 @@
 				arr[i] = prompt("Enter element " + (i+1));
 			}
 			alert(secondHighest(arr));
-		}
+		} 
 		Main();
 	</script>
 
