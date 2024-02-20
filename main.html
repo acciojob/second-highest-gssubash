@@ -10,34 +10,24 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			if(arr.length<2)return -Infinity; 
-			let flag = arr.reduce((a,b)=>{
-				return a==b;
-			});
-			if(flag){
-				return -Infinity;
+			if(arr.length<2)return -Infinity;
+
+			let max=-Infinity,result=-Infinity;
+			for(let i of arr){
+				max<i && (max=i);
+				(smax<i && i!=max)&&(result=i);
 			}
 			
-			let big = -Infinity,result=-Infinity;
-			for(let i=0;i<arr.length;i++){
-				if(big<arr[i])
-					big = arr[i]; 
-			}
-  
-			for(let i=0;i<arr.length;i++){
-				if(result<arr[i] && arr[i]!=big)
-					result = arr[i];
-			}
 			return result;
 		}
 
 		function Main() { 
-			var n = prompt("Enter the number of elements");
+			// var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			// alert(secondHighest(arr));
 		} 
 		Main();
 	</script>
