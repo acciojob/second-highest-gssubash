@@ -17,20 +17,20 @@
 				max<i && (max=i);
 			}
 			for(let i of arr){
-				(smax<i && i!=max)&&(result=i);
+				(result<i && i!=max)&&(result=i);
 				
-			}
+			}  
 			
 			return result;
 		}
 
-		function Main() { 
-			// var n = prompt("Enter the number of elements");
+		function Main() {  
+			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			// alert(secondHighest(arr));
+			alert(secondHighest(arr));
 		} 
 		Main();
 	</script>
