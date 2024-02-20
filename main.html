@@ -15,7 +15,10 @@
 			let max=-Infinity,result=-Infinity;
 			for(let i of arr){
 				max<i && (max=i);
+			}
+			for(let i of arr){
 				(smax<i && i!=max)&&(result=i);
+				
 			}
 			
 			return result;
